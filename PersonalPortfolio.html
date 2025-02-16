@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="PersonalPortfolio.css">
+</head>
+<body>
+    <header>
+        <a href="" class="logo"><span>My</span>Profile.</a>
+        <div class="menuIcon">
+            <i class="fa fa-bars" style="font-size: 35px;" onclick="toggleMenu()"></i>
+        </div>
+        <nav class="navigation">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#main">Projects</a>
+            <a href="#cont">Contacts</a>
+           
+        </nav>
+    </header>
+    <div class="hero">
+       
+        <div class="leftSide">
+        <div class="hero_indtroduction">
+            <h1>Hi, I'm <span>John Rohan C. Acebo</span></h1>
+            <h2>Something something developer</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi temporibus, iusto animi quos doloremque voluptas nemo, maiores saepe quis perferendis ab magni
+                 consectetur eveniet ad, corporis praesentium voluptate provident! Quas?
+            </p>
+        </div>
+        <div class="buttons">
+            <a href="" class="infos">Hire Me</a>
+            <a href="" class="infos">See Projects</a>
+        </div>
+        <div class="socials">
+            <a href="https://www.facebook.com/johnrohan.acebo"><i class="fa fa-facebook" style="font-size: 35px;"></i></a>
+            <a href=""><i class="fa fa-instagram" style="font-size: 35px;"></i></a>
+
+           
+        </div>
+        
+    </div>
+    <div class="rightSide">
+        <img src="Me.jpg" alt="It is me">
+    </div>
+    </div>
+    <script>
+        function toggleMenu() {
+    const navigation = document.querySelector('.navigation');
+    
+    if (navigation.style.display === 'flex') {
+        navigation.style.display = 'none';  // Hide if already shown
+    } else {
+        navigation.style.display = 'flex';  // Show if hidden
+    }
+}
+
+// Ensure navigation is reset when screen size changes
+window.addEventListener('resize', function() {
+    const navigation = document.querySelector('.navigation');
+    
+    if (window.innerWidth > 1200) {
+        navigation.style.display = 'flex';  // Ensure menu appears when screen expands
+    } else {
+        navigation.style.display = 'none';  // Hide it on smaller screens by default
+    }
+});
+
+        
+    </script>
+</body>
+</html>
